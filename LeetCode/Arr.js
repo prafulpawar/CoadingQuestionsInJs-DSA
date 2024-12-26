@@ -1,0 +1,6 @@
+
+
+
+var minimumOperations = function(nums) {
+    
+};
