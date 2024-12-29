@@ -1,13 +1,27 @@
-var percentageLetter = function(s, letter) {
-    let count = 0;
-   let lcount = 0;
-
-   for(let i=0; i<s.length;i++){
-         count++;
-       if(s.charAt(i) == letter){
-           lcount++;
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var countAsterisks = function(s) {
+    let nons=0
+   
+     for(let start = 0; start < s.length; start++ ) {
+           
+           if(s[start] ==='|'){
+               
+               let end=start+1
+              
+               while(end < s.length && s.charAt(end) !=='|'){
+                   end++;
+               }
+               start =end
+           }
+           else{
+               if(s[start]=='*'){
+                   nons++     
+               }
+           }
+          
        }
-   }
-
-   return Math.floor(lcount/count*100)
+     return nons
 };
