@@ -39,6 +39,7 @@ var romanToInt = function(s) {
                
                 ans+=newArr[i+1]-newArr[i]
                 i=i+1;
+                
              }
                   
        } 
